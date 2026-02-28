@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:salooma_app/core/assets/app_images.dart';
+import 'package:salooma_app/features/onboarding/presentation/views/onboarding_view.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -24,7 +25,12 @@ class _SplashViewBodyState extends State<SplashViewBody>
 
     fadeAnimation = Tween<double>(begin: 0, end: 1).animate(fadeController);
 
-    fadeController.forward(); // start animation
+    fadeController.forward().whenComplete(() {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => OnboardingView()),
+      );
+    }); // start animation
   }
 
   @override
