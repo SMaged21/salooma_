@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:salooma_app/features/splash/presentation/views/splash_view.dart';
+import 'package:salooma_app/core/app_routes.dart';
 
 void main() {
   runApp(const MainApp());
@@ -10,6 +10,6 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: SplashView());
+    return MaterialApp.router(routerConfig: AppRoutes.route);
   }
 }

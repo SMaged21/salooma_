@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:salooma_app/core/app_routes.dart';
 import 'package:salooma_app/core/assets/app_images.dart';
-import 'package:salooma_app/features/onboarding/presentation/views/onboarding_view.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -26,10 +27,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
     fadeAnimation = Tween<double>(begin: 0, end: 1).animate(fadeController);
 
     fadeController.forward().whenComplete(() {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => OnboardingView()),
-      );
+      GoRouter.of(context).push(AppRoutes.onboardingView);
     }); // start animation
   }
 
