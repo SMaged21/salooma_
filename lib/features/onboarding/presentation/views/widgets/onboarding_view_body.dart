@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:salooma_app/core/app_color.dart';
 import 'package:salooma_app/core/assets/app_fonts.dart';
+import 'package:salooma_app/features/onboarding/presentation/views/onboarding_page1.dart';
 
 class OnboardingViewBody extends StatefulWidget {
   const OnboardingViewBody({super.key});
@@ -15,7 +16,13 @@ class _OnboardingViewBodyState extends State<OnboardingViewBody> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(height: 500, child: PageView(children: [])),
+        Padding(
+          padding: const EdgeInsets.only(top: 100, left: 120),
+          child: SizedBox(
+            height: 400,
+            child: PageView(children: [OnboardingPage1()]),
+          ),
+        ),
         GroupOfContainers(),
         SizedBox(height: 15),
         CustomButton(),
