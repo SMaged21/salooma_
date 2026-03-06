@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:salooma_app/core/assets/app_images.dart';
 import 'package:salooma_app/features/onboarding/presentation/views/widgets/onboarding_data.dart';
 
 class OnboardingPage3Body extends StatelessWidget {
@@ -6,6 +7,11 @@ class OnboardingPage3Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return OnBoardingData();
+    return OnBoardingData(
+      title: 'organized person',
+      subtitle:
+          'A very hard worker student,who are trying to do her best through years of study',
+      img: AppImages.img3,
+    );
   }
 }

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:salooma_app/core/app_color.dart';
+import 'package:salooma_app/core/app_routes.dart';
 import 'package:salooma_app/core/assets/app_fonts.dart';
 import 'package:salooma_app/features/onboarding/presentation/views/onboarding_page1.dart';
 import 'package:salooma_app/features/onboarding/presentation/views/onboarding_page2.dart';
@@ -21,7 +23,7 @@ class _OnboardingViewBodyState extends State<OnboardingViewBody> {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.only(top: 100, left: 120),
+          padding: const EdgeInsets.only(top: 100),
           child: SizedBox(
             height: 400,
             child: PageView(
@@ -46,37 +48,53 @@ class _OnboardingViewBodyState extends State<OnboardingViewBody> {
         ),
         SizedBox(height: 15),
         CustomButton(
+          text: "next",
           onPressed: () {
             if (index < 2) {
               _pageController.nextPage(
                 duration: Duration(milliseconds: 300),
                 curve: Curves.easeIn,
               );
+            } else {
+              GoRouter.of(context).push(AppRoutes.cvView);
             }
           },
         ),
         SizedBox(height: 15),
-        index < 2 ? CustomTextButton() : SizedBox(),
+        index < 2
+            ? CustomTextButton(
+                onPressed: () {
+                  GoRouter.of(context).push(AppRoutes.cvView);
+                },
+              )
+            : SizedBox(),
       ],
     );
   }
 }
 
 class CustomTextButton extends StatelessWidget {
-  const CustomTextButton({super.key});
+  final void Function()? onPressed;
+  const CustomTextButton({super.key, this.onPressed});
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      "skip",
-      style: AppFonts.st20.copyWith(fontFamily: GoogleFonts.inter().fontFamily),
+    return MaterialButton(
+      onPressed: onPressed,
+      child: Text(
+        "skip",
+        style: AppFonts.st20.copyWith(
+          fontFamily: GoogleFonts.inter().fontFamily,
+        ),
+      ),
     );
   }
 }
 
 class CustomButton extends StatelessWidget {
   final void Function()? onPressed;
-  const CustomButton({super.key, this.onPressed});
+  final String text;
+  const CustomButton({super.key, this.onPressed, required this.text});
 
   @override
   Widget build(BuildContext context) {
@@ -92,7 +110,7 @@ class CustomButton extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.only(top: 16, left: 128),
           child: Text(
-            "next",
+            text,
             style: AppFonts.st24.copyWith(
               fontFamily: GoogleFonts.inter().fontFamily,
               color: Colors.white,

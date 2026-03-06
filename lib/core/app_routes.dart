@@ -1,9 +1,11 @@
 import 'package:go_router/go_router.dart';
+import 'package:salooma_app/features/cv/presentation/views/cv_view.dart';
 import 'package:salooma_app/features/onboarding/presentation/views/onboarding_view.dart';
 import 'package:salooma_app/features/splash/presentation/views/splash_view.dart';
 
 class AppRoutes {
   static String onboardingView = "/onboardingView";
+  static String cvView = "/cvView";
 
   static GoRouter route = GoRouter(
     routes: [
@@ -13,6 +15,7 @@ class AppRoutes {
         path: onboardingView,
         builder: (context, state) => OnboardingView(),
       ),
+      GoRoute(path: cvView, builder: (context, state) => CvView()),
     ],
   );
 }
