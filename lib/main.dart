@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:salooma_app/core/app_color.dart';
 import 'package:salooma_app/core/app_routes.dart';
 
 void main() {
@@ -10,6 +11,10 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(routerConfig: AppRoutes.route);
+    return MaterialApp.router(
+      theme: ThemeData(scaffoldBackgroundColor: AppColor.secondColor),
+
+      routerConfig: AppRoutes.route,
+    );
   }
 }

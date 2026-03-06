@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:salooma_app/features/onboarding/presentation/views/widgets/onboarding_data.dart';
 
-class OnboardingPage1Body extends StatelessWidget {
-  const OnboardingPage1Body({super.key});
+class OnboardingPage3Body extends StatelessWidget {
+  const OnboardingPage3Body({super.key});
 
   @override
   Widget build(BuildContext context) {

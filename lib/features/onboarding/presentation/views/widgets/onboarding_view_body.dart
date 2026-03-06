@@ -3,6 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:salooma_app/core/app_color.dart';
 import 'package:salooma_app/core/assets/app_fonts.dart';
 import 'package:salooma_app/features/onboarding/presentation/views/onboarding_page1.dart';
+import 'package:salooma_app/features/onboarding/presentation/views/onboarding_page2.dart';
+import 'package:salooma_app/features/onboarding/presentation/views/onboarding_page3.dart';
 
 class OnboardingViewBody extends StatefulWidget {
   const OnboardingViewBody({super.key});
@@ -12,6 +14,8 @@ class OnboardingViewBody extends StatefulWidget {
 }
 
 class _OnboardingViewBodyState extends State<OnboardingViewBody> {
+  int index = 0;
+  final PageController _pageController = PageController();
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -20,14 +24,39 @@ class _OnboardingViewBodyState extends State<OnboardingViewBody> {
           padding: const EdgeInsets.only(top: 100, left: 120),
           child: SizedBox(
             height: 400,
-            child: PageView(children: [OnboardingPage1()]),
+            child: PageView(
+              controller: _pageController,
+              onPageChanged: (value) {
+                setState(() {
+                  index = value;
+                });
+              },
+              children: [
+                OnboardingPage1(),
+                OnboardingPage2(),
+                OnboardingPage3(),
+              ],
+            ),
           ),
         ),
-        GroupOfContainers(),
+        GroupOfContainers(
+          index1: index == 0,
+          index2: index == 1,
+          index3: index == 2,
+        ),
         SizedBox(height: 15),
-        CustomButton(),
+        CustomButton(
+          onPressed: () {
+            if (index < 2) {
+              _pageController.nextPage(
+                duration: Duration(milliseconds: 300),
+                curve: Curves.easeIn,
+              );
+            }
+          },
+        ),
         SizedBox(height: 15),
-        CustomTextButton(),
+        index < 2 ? CustomTextButton() : SizedBox(),
       ],
     );
   }
@@ -46,25 +75,29 @@ class CustomTextButton extends StatelessWidget {
 }
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key});
+  final void Function()? onPressed;
+  const CustomButton({super.key, this.onPressed});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 65,
-      width: 300,
-      decoration: BoxDecoration(
-        color: AppColor.primaryColor,
-        borderRadius: BorderRadius.circular(12),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.only(top: 16, left: 128),
-        child: Text(
-          "next",
-          style: AppFonts.st24.copyWith(
-            fontFamily: GoogleFonts.inter().fontFamily,
-            color: Colors.white,
-            fontWeight: FontWeight.w800,
+    return MaterialButton(
+      onPressed: onPressed,
+      child: Container(
+        height: 65,
+        width: 300,
+        decoration: BoxDecoration(
+          color: AppColor.primaryColor,
+          borderRadius: BorderRadius.circular(12),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.only(top: 16, left: 128),
+          child: Text(
+            "next",
+            style: AppFonts.st24.copyWith(
+              fontFamily: GoogleFonts.inter().fontFamily,
+              color: Colors.white,
+              fontWeight: FontWeight.w800,
+            ),
           ),
         ),
       ),
