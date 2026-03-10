@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:salooma_app/features/books/presentation/views/book_view.dart';
 import 'package:salooma_app/features/cv/presentation/views/cv_view.dart';
 import 'package:salooma_app/features/onboarding/presentation/views/onboarding_view.dart';
 import 'package:salooma_app/features/splash/presentation/views/splash_view.dart';
@@ -6,6 +7,7 @@ import 'package:salooma_app/features/splash/presentation/views/splash_view.dart'
 class AppRoutes {
   static String onboardingView = "/onboardingView";
   static String cvView = "/cvView";
+  static String bookView = "/bookView";
 
   static GoRouter route = GoRouter(
     routes: [
@@ -16,6 +18,7 @@ class AppRoutes {
         builder: (context, state) => OnboardingView(),
       ),
       GoRoute(path: cvView, builder: (context, state) => CvView()),
+      GoRoute(path: bookView, builder: (context, state) => BookView()),
     ],
   );
 }
