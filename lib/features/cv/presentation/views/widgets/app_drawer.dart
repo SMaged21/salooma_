@@ -28,21 +28,10 @@ class AppDrawer extends StatelessWidget {
               leading: const Icon(Icons.book_rounded),
               title: const Text("Books"),
               onTap: () {
-                Navigator.pop(context);
-
                 context.go(AppRoutes.bookView);
+                Navigator.pop(context);
               },
             ),
-
-            // ListTile(
-            //   leading: const Icon(Icons.note),
-            //   title: const Text("Notes"),
-            //   onTap: () {
-            //     Navigator.pop(context);
-
-            //     // add navigation later
-            //   },
-            // ),
           ],
         ),
       ),
