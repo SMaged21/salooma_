@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "21277942361",
+    "project_id": "salma-4a5cb",
+    "storage_bucket": "salma-4a5cb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:21277942361:android:2e93bc2d95e9e76ca98748",
+        "android_client_info": {
+          "package_name": "com.example.salooma_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArqb3l8zX1v5-UigL1TDIRsIaMvpKZIOA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
