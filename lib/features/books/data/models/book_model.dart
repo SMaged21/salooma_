@@ -10,4 +10,13 @@ class BookModel {
     required this.bookAuthor,
     required this.bookDescription,
   });
+
+  factory BookModel.fromJson(Map<String, dynamic> json) {
+    return BookModel(
+      bookTitle: json['book_title'] ?? '',
+      img: json['book_img'] ?? '',
+      bookAuthor: json['book_author'] ?? '',
+      bookDescription: json['description'] ?? '',
+    );
+  }
 }

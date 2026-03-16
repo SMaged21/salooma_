@@ -1,9 +1,12 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class ApiService {
-  final db = FirebaseFirestore.instance;
+  final FirebaseFirestore firestore;
 
-  Future<QuerySnapshot> get(String collectionPath) {
-    return db.collection(collectionPath).get();
+  ApiService({required this.firestore});
+
+  Future<QuerySnapshot> get(String collectionPath) async {
+    var response = await firestore.collection(collectionPath).get();
+    return response;
   }
 }
