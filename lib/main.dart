@@ -1,8 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:salooma_app/core/app_color.dart';
-import 'package:salooma_app/core/app_routes.dart';
-import 'package:salooma_app/firebase_options.dart';
+import 'package:salma_maged/core/app_color.dart';
+import 'package:salma_maged/core/app_routes.dart';
+import 'package:salma_maged/firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

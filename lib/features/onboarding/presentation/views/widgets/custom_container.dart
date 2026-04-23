@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:salooma_app/core/app_color.dart';
+import 'package:salma_maged/core/app_color.dart';
 
 class CustomContainer extends StatelessWidget {
   final bool isActivated;

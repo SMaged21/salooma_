@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:salooma_app/core/assets/app_fonts.dart';
+import 'package:salma_maged/core/assets/app_fonts.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
   const BookDetailsViewBody({super.key});

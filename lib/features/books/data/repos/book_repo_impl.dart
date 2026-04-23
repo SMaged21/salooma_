@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
-import 'package:salooma_app/core/api_service.dart';
-import 'package:salooma_app/core/errors/failure.dart';
-import 'package:salooma_app/features/books/data/models/book_model.dart';
-import 'package:salooma_app/features/books/data/repos/book_repo.dart';
+import 'package:salma_maged/core/api_service.dart';
+import 'package:salma_maged/core/errors/failure.dart';
+import 'package:salma_maged/features/books/data/models/book_model.dart';
+import 'package:salma_maged/features/books/data/repos/book_repo.dart';
 
 class BookRepoImpl implements BookRepo {
   final ApiService apiService;

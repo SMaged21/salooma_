@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:salooma_app/features/onboarding/presentation/views/widgets/onboarding_page1_body.dart';
+import 'package:salma_maged/features/onboarding/presentation/views/widgets/onboarding_page1_body.dart';
 
 class OnboardingPage1 extends StatelessWidget {
   const OnboardingPage1({super.key});

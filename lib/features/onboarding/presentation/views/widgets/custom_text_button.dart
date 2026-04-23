@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:salooma_app/core/assets/app_fonts.dart';
+import 'package:salma_maged/core/assets/app_fonts.dart';
 
 class CustomTextButton extends StatelessWidget {
   final void Function()? onPressed;

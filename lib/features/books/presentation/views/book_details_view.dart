@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:salooma_app/core/app_color.dart';
-import 'package:salooma_app/features/books/presentation/views/widgets/book_details_view_body.dart';
+import 'package:salma_maged/core/app_color.dart';
+import 'package:salma_maged/features/books/presentation/views/widgets/book_details_view_body.dart';
 
 class BookDetailsView extends StatelessWidget {
   const BookDetailsView({super.key});

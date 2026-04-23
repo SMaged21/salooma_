@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:salooma_app/features/onboarding/presentation/views/widgets/custom_container.dart';
+import 'package:salma_maged/features/onboarding/presentation/views/widgets/custom_container.dart';
 
 class GroupOfContainers extends StatelessWidget {
   final bool index1;

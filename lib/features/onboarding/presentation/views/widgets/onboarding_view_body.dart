@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:salooma_app/core/app_routes.dart';
-import 'package:salooma_app/features/onboarding/presentation/views/onboarding_page1.dart';
-import 'package:salooma_app/features/onboarding/presentation/views/onboarding_page2.dart';
-import 'package:salooma_app/features/onboarding/presentation/views/onboarding_page3.dart';
-import 'package:salooma_app/features/onboarding/presentation/views/widgets/custom_button.dart';
-import 'package:salooma_app/features/onboarding/presentation/views/widgets/custom_text_button.dart';
-import 'package:salooma_app/features/onboarding/presentation/views/widgets/group_of_containers.dart';
+import 'package:salma_maged/core/app_routes.dart';
+import 'package:salma_maged/features/onboarding/presentation/views/onboarding_page1.dart';
+import 'package:salma_maged/features/onboarding/presentation/views/onboarding_page2.dart';
+import 'package:salma_maged/features/onboarding/presentation/views/onboarding_page3.dart';
+import 'package:salma_maged/features/onboarding/presentation/views/widgets/custom_button.dart';
+import 'package:salma_maged/features/onboarding/presentation/views/widgets/custom_text_button.dart';
+import 'package:salma_maged/features/onboarding/presentation/views/widgets/group_of_containers.dart';
 
 class OnboardingViewBody extends StatefulWidget {
   const OnboardingViewBody({super.key});

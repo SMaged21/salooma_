@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:salooma_app/features/books/presentation/views/widgets/custom_list_item.dart';
+import 'package:salma_maged/features/books/presentation/views/widgets/custom_list_item.dart';
 
 class CustomBookList extends StatelessWidget {
   const CustomBookList({super.key});

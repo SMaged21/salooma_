@@ -1,9 +1,9 @@
 import 'package:go_router/go_router.dart';
-import 'package:salooma_app/features/books/presentation/views/book_details_view.dart';
-import 'package:salooma_app/features/books/presentation/views/book_view.dart';
-import 'package:salooma_app/features/cv/presentation/views/cv_view.dart';
-import 'package:salooma_app/features/onboarding/presentation/views/onboarding_view.dart';
-import 'package:salooma_app/features/splash/presentation/views/splash_view.dart';
+import 'package:salma_maged/features/books/presentation/views/book_details_view.dart';
+import 'package:salma_maged/features/books/presentation/views/book_view.dart';
+import 'package:salma_maged/features/cv/presentation/views/cv_view.dart';
+import 'package:salma_maged/features/onboarding/presentation/views/onboarding_view.dart';
+import 'package:salma_maged/features/splash/presentation/views/splash_view.dart';
 
 class AppRoutes {
   static String onboardingView = "/onboardingView";

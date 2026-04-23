@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:salooma_app/core/app_routes.dart';
-import 'package:salooma_app/core/assets/app_images.dart';
+import 'package:salma_maged/core/app_routes.dart';
+import 'package:salma_maged/core/assets/app_images.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});

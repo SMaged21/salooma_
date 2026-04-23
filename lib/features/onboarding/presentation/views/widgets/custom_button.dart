@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:salooma_app/core/app_color.dart';
-import 'package:salooma_app/core/assets/app_fonts.dart';
+import 'package:salma_maged/core/app_color.dart';
+import 'package:salma_maged/core/assets/app_fonts.dart';
 
 class CustomButton extends StatefulWidget {
   final void Function()? onPressed;

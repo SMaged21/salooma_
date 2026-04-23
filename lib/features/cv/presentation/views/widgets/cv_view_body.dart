@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:salooma_app/core/assets/app_fonts.dart';
-import 'package:salooma_app/features/cv/presentation/views/widgets/profile_header.dart';
+import 'package:salma_maged/core/assets/app_fonts.dart';
+import 'package:salma_maged/features/cv/presentation/views/widgets/profile_header.dart';
 
 class CvViewBody extends StatelessWidget {
   const CvViewBody({super.key});

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:salooma_app/core/assets/app_images.dart';
-import 'package:salooma_app/features/onboarding/presentation/views/widgets/onboarding_data.dart';
+import 'package:salma_maged/core/assets/app_images.dart';
+import 'package:salma_maged/features/onboarding/presentation/views/widgets/onboarding_data.dart';
 
 class OnboardingPage3Body extends StatelessWidget {
   const OnboardingPage3Body({super.key});

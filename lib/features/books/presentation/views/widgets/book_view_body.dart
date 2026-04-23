@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:salooma_app/core/assets/app_fonts.dart';
-import 'package:salooma_app/features/books/presentation/views/widgets/custom_book_list.dart';
+import 'package:salma_maged/core/assets/app_fonts.dart';
+import 'package:salma_maged/features/books/presentation/views/widgets/custom_book_list.dart';
 
 class BookViewBody extends StatelessWidget {
   const BookViewBody({super.key});

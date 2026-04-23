@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:salooma_app/core/app_color.dart';
-import 'package:salooma_app/features/cv/presentation/views/widgets/app_drawer.dart';
-import 'package:salooma_app/features/cv/presentation/views/widgets/cv_view_body.dart';
+import 'package:salma_maged/core/app_color.dart';
+import 'package:salma_maged/features/cv/presentation/views/widgets/app_drawer.dart';
+import 'package:salma_maged/features/cv/presentation/views/widgets/cv_view_body.dart';
 
 class CvView extends StatelessWidget {
   const CvView({super.key});
