@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class ApiService {
-  final firestore;
+  final FirebaseFirestore firestore;
 
   ApiService({required this.firestore});
 

@@ -16,6 +16,7 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
+      title: 'salma maged',
       theme: ThemeData(scaffoldBackgroundColor: AppColor.secondColor),
 
       routerConfig: AppRoutes.route,

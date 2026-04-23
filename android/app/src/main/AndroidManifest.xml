@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="salooma_app"
+        android:label="salma maged"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
