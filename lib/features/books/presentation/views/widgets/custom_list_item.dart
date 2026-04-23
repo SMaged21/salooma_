@@ -15,7 +15,7 @@ class CustomListItem extends StatelessWidget {
     double height = MediaQuery.sizeOf(context).height;
     return MaterialButton(
       onPressed: () {
-        GoRouter.of(context).push(AppRoutes.bookDetailsView);
+        GoRouter.of(context).push(AppRoutes.bookDetailsView, extra: book);
       },
       child: Column(
         children: [

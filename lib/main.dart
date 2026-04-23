@@ -18,7 +18,7 @@ class MainApp extends StatelessWidget {
     return MaterialApp.router(
       title: 'salma maged',
       theme: ThemeData(scaffoldBackgroundColor: AppColor.secondColor),
-
+      debugShowCheckedModeBanner: false,
       routerConfig: AppRoutes.route,
     );
   }

@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:salma_maged/features/books/data/models/book_model.dart';
 import 'package:salma_maged/features/books/presentation/views/book_details_view.dart';
 import 'package:salma_maged/features/books/presentation/views/book_view.dart';
 import 'package:salma_maged/features/cv/presentation/views/cv_view.dart';
@@ -23,7 +24,10 @@ class AppRoutes {
       GoRoute(path: bookView, builder: (context, state) => BookView()),
       GoRoute(
         path: bookDetailsView,
-        builder: (context, state) => BookDetailsView(),
+        builder: (context, state) {
+          final book = state.extra as BookModel;
+          return BookDetailsView(book: book);
+        },
       ),
     ],
   );

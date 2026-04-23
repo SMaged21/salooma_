@@ -19,6 +19,7 @@ class BookViewBody extends StatelessWidget {
           Expanded(child: CustomBookListBuilder()),
           Text("Favourite books", style: AppFonts.st32),
           Expanded(child: CustomFavouriteBookListBuilder()),
+          SizedBox(height: 20),
         ],
       ),
     );
