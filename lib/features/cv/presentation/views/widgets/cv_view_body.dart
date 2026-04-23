@@ -17,14 +17,14 @@ class CvViewBody extends StatelessWidget {
             ProfileHeader(),
             Text("Contact", style: AppFonts.st24),
             Text(
-              '''\u2022 01004691832\n\u2022 01080899857\n\u2022 zweensam@gmail.comBullet Text''',
+              '''\u2022 01004691832\n\u2022 01080899857\n\u2022 zweensam@gmail.com''',
               style: AppFonts.st20.copyWith(
                 fontFamily: GoogleFonts.abhayaLibre().fontFamily,
               ),
             ),
             Text("Education", style: AppFonts.st24),
             Text(
-              '''\u2022 01004691832\n\u2022 01080899857\n\u2022 zweensam@gmail.comBullet Text''',
+              '''\u2022 Damietta university\n\u2022 faculty of computer and artificial intelligence (IT department)\n\u2022 GPA: 3.71 \n\u2022 rank: third on department''',
               style: AppFonts.st20.copyWith(
                 fontFamily: GoogleFonts.abhayaLibre().fontFamily,
               ),
