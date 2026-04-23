@@ -25,7 +25,17 @@ class BookRepoImpl implements BookRepo {
   }
 
   @override
-  Future<Either<Failure, List<BookModel>>> fetchFavouriteBooks() {
-    throw UnimplementedError();
+  Future<Either<Failure, List<BookModel>>> fetchFavouriteBooks() async {
+    try {
+      final querySnapshot = await apiService.get("favourite books");
+
+      List<BookModel> books = querySnapshot.docs
+          .map((doc) => BookModel.fromJson(doc.data() as Map<String, dynamic>))
+          .toList();
+
+      return right(books);
+    } catch (e) {
+      return left(ServerFailure(errMessage: e.toString()));
+    }
   }
 }

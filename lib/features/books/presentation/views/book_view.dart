@@ -5,6 +5,7 @@ import 'package:salma_maged/core/api_service.dart';
 import 'package:salma_maged/core/app_color.dart';
 import 'package:salma_maged/features/books/data/repos/book_repo_impl.dart';
 import 'package:salma_maged/features/books/presentation/manager/fetch_books_cubit/fetch_books_cubit.dart';
+import 'package:salma_maged/features/books/presentation/manager/fetch_favourite_books_cubit/fetch_favourite_books_cubit.dart';
 import 'package:salma_maged/features/books/presentation/views/widgets/book_view_body.dart';
 import 'package:salma_maged/features/cv/presentation/views/widgets/app_drawer.dart';
 
@@ -21,6 +22,13 @@ class BookView extends StatelessWidget {
               apiService: ApiService(firestore: FirebaseFirestore.instance),
             ),
           )..fetchBooks(),
+        ),
+        BlocProvider(
+          create: (context) => FetchFavouriteBooksCubit(
+            bookRepo: BookRepoImpl(
+              apiService: ApiService(firestore: FirebaseFirestore.instance),
+            ),
+          )..fetchFavouriteBooks(),
         ),
       ],
       child: Scaffold(
